@@ -5,7 +5,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import schema from './schema'
 import resolvers from './resolvers'
 
-const PORT = 3000;
+const PORT = 4000;
 var app = express();
 
 const executableSchema = makeExecutableSchema({

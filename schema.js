@@ -3,6 +3,8 @@ type Reservation {
   id: Int!
   start: Float!
   end: Float!
+  startDate: String!
+  endDate: String!
 }
 
 type Query {
