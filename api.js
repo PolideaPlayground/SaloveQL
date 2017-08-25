@@ -13,9 +13,8 @@ export default {
     postReservation(reservation) {
         return axios.post(`${BASE_URL}/rooms/reservations`, reservation)
             .then(response => {
-                // console.log(response)
-                return response
+                return response.data
             })
-            .then(response => reservation)
+
     }
 }

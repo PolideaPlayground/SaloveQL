@@ -11,18 +11,14 @@ function reservationFromAPI(reservation) {
 export default {
   Query: {
     reservations: (root, args, context) => {
-        return API.getReservations().then(reservations => 
-            reservations.map(reservationFromAPI)
-        )
+        return API.getReservations()
     }
   },
   Mutation: {
     reserveRoom: (root, args, context) => {
       return API.postReservation({
         roomId: args.roomId,
-        start: args.start,
-        end: args.end
-      }).then(reservationFromAPI);
+      })
     }
   }
 };

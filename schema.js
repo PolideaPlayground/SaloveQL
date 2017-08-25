@@ -3,8 +3,6 @@ type Reservation {
   roomId: Int!
   start: Float!
   end: Float!
-  startDate: String!
-  endDate: String!
   summary: String!
 }
 
@@ -15,8 +13,6 @@ type Query {
 type Mutation {
   reserveRoom (
     roomId: Int!
-    start: Float!
-    end: Float!
   ): Reservation
 }
 `
