@@ -1,10 +1,11 @@
 const typeDefs = `
 type Reservation {
-  id: Int!
+  roomId: Int!
   start: Float!
   end: Float!
   startDate: String!
   endDate: String!
+  summary: String!
 }
 
 type Query {
@@ -13,7 +14,7 @@ type Query {
 
 type Mutation {
   reserveRoom (
-    id: Int!
+    roomId: Int!
     start: Float!
     end: Float!
   ): Reservation
