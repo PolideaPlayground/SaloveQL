@@ -1,5 +1,6 @@
 import moment from "moment";
 import API from "./api";
+import db from "./db.json"
 
 function reservationFromAPI(reservation) {
     return Object.assign(reservation, {
@@ -12,7 +13,10 @@ export default {
   Query: {
     reservations: (root, args, context) => {
         return API.getReservations()
-    }
+    },
+    rooms: (root, args, context) => {
+      return db.rooms
+    },
   },
   Mutation: {
     reserveRoom: (root, args, context) => {
@@ -20,5 +24,10 @@ export default {
         roomId: args.roomId,
       })
     }
+  },
+  Reservation: {
+    room: (root, args, context) => {
+      return db.rooms.find(room => room.id === root.roomId)
+    },
   }
 };

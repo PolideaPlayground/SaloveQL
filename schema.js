@@ -1,13 +1,27 @@
 const typeDefs = `
 type Reservation {
-  roomId: Int!
+  room: Room!
   start: Float!
   end: Float!
   summary: String!
 }
 
+type Room {
+  id: ID!
+  size: RoomSize!
+  name: String!
+  color: String
+}
+
+enum RoomSize {
+  small
+  medium
+  large
+}
+
 type Query {
   reservations: [Reservation]
+  rooms: [Room]
 }
 
 type Mutation {

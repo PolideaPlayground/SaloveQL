@@ -1,0 +1,11 @@
+{
+    "rooms": [
+        { "id": "102", "size": "small", "name": "Blue room", "color": "blue" },
+        { "id": "103", "size": "small", "name": "Yellow room", "color": "yellow" },
+        { "id": "104", "size": "medium", "name": "War room", "color": "grey" },
+        { "id": "106", "size": "small", "name": "Orange room", "color": "orange" },
+        { "id": "107", "size": "small", "name": "Purple room", "color": "purple" },
+        { "id": "110", "size": "small", "name": "Trambambula room", "color": null },
+        { "id": "111", "size": "large", "name": "Meetup room", "color": "grey" }
+    ]
+}
